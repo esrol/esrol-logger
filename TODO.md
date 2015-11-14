@@ -2,7 +2,7 @@
 - [ ] Set comments
 - [x] Build
 - [ ] Tests
-- [ ] Implement error numbers using xena-errors
+- [x] Examples
 - [ ] Coverage
 - [ ] Update readme
 - [ ] Update version
