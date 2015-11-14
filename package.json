@@ -21,8 +21,8 @@
     "test": "node_modules/.bin/mocha ./tests/*.js"
   },
   "dependencies": {
-    "debug": "^2.2.0",
-    "xena-errors": "^0.3.0"
+    "colors": "^1.1.2",
+    "debug": "^2.2.0"
   },
   "devDependencies": {
     "chai": "^3.4.0",
