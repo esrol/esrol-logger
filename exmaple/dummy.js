@@ -1,5 +1,5 @@
 'use strict';
-let Logger = require('xena-logger');
+let Logger = require('esrol-logger');
 let logger = new Logger('dummyNamespace');
 
 // The following will write messages into log file
