@@ -3,7 +3,7 @@
   "description": "Later",
   "version": "0.0.6",
   "main": "index.js",
-  "author": "Ivaylo Ivanov <Ivchoyyyy@gmail.com>",
+  "author": "Ivaylo Ivanov <ivaylo.ivanov.ipi@gmail.com>",
   "repository": {
     "type": "git",
     "url": "git://github.com/esrol/esrol-logger"
@@ -18,7 +18,9 @@
   },
   "config": {},
   "scripts": {
-    "test": "node_modules/.bin/mocha ./tests/*.js"
+    "test": "node_modules/.bin/mocha ./tests/test --harmony",
+    "coverage": "node --harmony node_modules/istanbul/lib/cli.js cover _mocha ./tests/ -- -u exports -R spec",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "dependencies": {
     "colors": "^1.1.2",
@@ -26,6 +28,10 @@
   },
   "devDependencies": {
     "chai": "^3.4.0",
-    "mocha": "^2.3.3"
+    "coveralls": "^2.11.4",
+    "istanbul": "^0.4.1",
+    "mocha": "^2.3.3",
+    "mocha-sinon": "^1.1.4",
+    "sinon": "^1.17.2"
   }
 }

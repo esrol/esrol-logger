@@ -1,9 +1,0 @@
-[Sat Nov 14 2015 14:55:10 GMT+0200 (EET)]  dummyNamespace - WARNING: Warning message
-[Sat Nov 14 2015 14:55:10 GMT+0200 (EET)]  dummyNamespace - ALERT: Alert message
-[Sat Nov 14 2015 14:55:10 GMT+0200 (EET)]  dummyNamespace - ERROR: Error message
-[Sat Nov 14 2015 14:55:10 GMT+0200 (EET)]  dummyNamespace - CRITICAL: Critical message
-[Sat Nov 14 2015 14:55:10 GMT+0200 (EET)]  dummyNamespace - INFO: Info message
-[Sat Nov 14 2015 14:55:10 GMT+0200 (EET)]  dummyNamespace - NOTICE: Notice message
-[Sat Nov 14 2015 14:55:10 GMT+0200 (EET)]  dummyNamespace - SUCCESS: Success message
-[Sat Nov 14 2015 14:55:10 GMT+0200 (EET)]  dummyNamespace - BADREQUEST: Badrequest message
-[Sat Nov 14 2015 14:55:10 GMT+0200 (EET)]  dummyNamespace - UNAUTHORIZED: Unauthorized message

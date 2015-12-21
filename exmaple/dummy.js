@@ -1,6 +1,6 @@
 'use strict';
 let Logger = require('esrol-logger');
-let logger = new Logger('dummyNamespace');
+let logger = new Logger('your-namespace');
 
 // The following will write messages into log file
 // You can use TYPE=* node dummy.js or TYPE=info,error node dummy.js
@@ -16,9 +16,9 @@ logger.badrequest('Badrequest message');
 logger.unauthorized('Unauthorized message');
 // The debug behave just like node debug module
 // and you should use the DEBUG variable
-// DEBUG=dummyNamespace node dummy.js or DEBUG=* node dummy.js
+// DEBUG=your-namespace node dummy.js or DEBUG=* node dummy.js
 // Note: the debug method does not write message into log file
 logger.debug('Debug message');
-// Or you can combine all of them like: 
+// Or you can combine all of them like:
 // DEBUG=* TYPE=* node dummy.js
 // ENJOY THE RAINBOW :D
