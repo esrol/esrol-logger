@@ -1,0 +1,9 @@
+[Mon Dec 21 2015 14:22:00 GMT+0200 (EET)]  your-namespace - WARNING: Warning message
+[Mon Dec 21 2015 14:22:00 GMT+0200 (EET)]  your-namespace - ALERT: Alert message
+[Mon Dec 21 2015 14:22:00 GMT+0200 (EET)]  your-namespace - ERROR: Error message
+[Mon Dec 21 2015 14:22:00 GMT+0200 (EET)]  your-namespace - CRITICAL: Critical message
+[Mon Dec 21 2015 14:22:00 GMT+0200 (EET)]  your-namespace - INFO: Info message
+[Mon Dec 21 2015 14:22:00 GMT+0200 (EET)]  your-namespace - NOTICE: Notice message
+[Mon Dec 21 2015 14:22:00 GMT+0200 (EET)]  your-namespace - SUCCESS: Success message
+[Mon Dec 21 2015 14:22:00 GMT+0200 (EET)]  your-namespace - BADREQUEST: Badrequest message
+[Mon Dec 21 2015 14:22:00 GMT+0200 (EET)]  your-namespace - UNAUTHORIZED: Unauthorized message
