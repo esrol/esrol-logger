@@ -1,6 +1,6 @@
 {
   "name": "esrol-logger",
-  "description": "Later",
+  "description": "Write different type of messages, create daily log files and output colored messages to the console.",
   "version": "0.0.6",
   "main": "index.js",
   "author": "Ivaylo Ivanov <ivaylo.ivanov.ipi@gmail.com>",
@@ -12,7 +12,7 @@
     "url": "https://github.com/esrol/esrol-logger"
   },
   "license": "MIT",
-  "keywords": [],
+  "keywords": ["log", "daily", "write", "file", "color", "message"],
   "engines": {
     "node": ">= 4.0.0"
   },
