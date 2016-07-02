@@ -1,19 +1,19 @@
 'use strict';
-let Logger = require('esrol-logger');
-let logger = new Logger('your-namespace');
+const Logger = require('../');
+const logger = new Logger('your-namespace');
 
 // The following will write messages into log file
 // You can use TYPE=* node dummy.js or TYPE=info,error node dummy.js
 // to output message into console
-logger.warning('Warning message');
-logger.alert('Alert message');
-logger.error('Error message');
-logger.critical('Critical message');
-logger.info('Info message');
-logger.notice('Notice message');
-logger.success('Success message');
-logger.badrequest('Badrequest message');
-logger.unauthorized('Unauthorized message');
+logger.warning('w', 'Warning message');
+logger.alert('a', 'Alert message');
+logger.error('e', 'Error message');
+logger.critical('c', 'Critical message');
+logger.info('i', 'Info message');
+logger.notice('n', 'Notice message');
+logger.success('s', 'Success message');
+logger.badrequest('b', 'Badrequest message');
+logger.unauthorized('login', {username: 'dummy', password: 'qwerty123'});
 // The debug behave just like node debug module
 // and you should use the DEBUG variable
 // DEBUG=your-namespace node dummy.js or DEBUG=* node dummy.js

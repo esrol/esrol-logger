@@ -1,7 +1,7 @@
 {
   "name": "esrol-logger",
   "description": "Write different type of messages, create daily log files and output colored messages to the console.",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "index.js",
   "author": "Ivaylo Ivanov <ivaylo.ivanov.ipi@gmail.com>",
   "repository": {
@@ -12,13 +12,21 @@
     "url": "https://github.com/esrol/esrol-logger"
   },
   "license": "MIT",
-  "keywords": ["log", "daily", "write", "file", "color", "message"],
+  "keywords": [
+    "log",
+    "daily",
+    "write",
+    "file",
+    "color",
+    "message"
+  ],
   "engines": {
     "node": ">= 4.0.0"
   },
   "config": {},
   "scripts": {
-    "test": "node_modules/.bin/mocha ./tests/test --harmony",
+    "lint": "node_modules/.bin/eslint ./lib",
+    "test": "npm run lint && node_modules/.bin/mocha ./tests/test --harmony",
     "coverage": "node --harmony node_modules/istanbul/lib/cli.js cover _mocha ./tests/ -- -u exports -R spec",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
@@ -29,6 +37,7 @@
   "devDependencies": {
     "chai": "^3.4.0",
     "coveralls": "^2.11.4",
+    "eslint": "^3.0.0",
     "istanbul": "^0.4.1",
     "mocha": "^2.3.3",
     "mocha-sinon": "^1.1.4",
