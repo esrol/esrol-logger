@@ -3,7 +3,7 @@ const Logger = require('../');
 const logger = new Logger('your-namespace');
 
 // The following will write messages into log file
-// You can use TYPE=* node dummy.js or TYPE=info,error node dummy.js
+// You can use LOGGER_TYPES=* node dummy.js or LOGGER_TYPES=info,error node dummy.js
 // to output message into console
 logger.warning('w', 'Warning message');
 logger.alert('a', 'Alert message');
@@ -20,5 +20,5 @@ logger.unauthorized('login', {username: 'dummy', password: 'qwerty123'});
 // Note: the debug method does not write message into log file
 logger.debug('Debug message');
 // Or you can combine all of them like:
-// DEBUG=* TYPE=* node dummy.js
+// DEBUG=* LOGGER_TYPES=* node dummy.js
 // ENJOY THE RAINBOW :D
