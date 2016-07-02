@@ -1,4 +1,5 @@
 'use strict';
+process.env.LOGGER_TYPES = '*';
 const expect = require('chai').expect;
 const Logger = require('../index.js');
 const path = require('path');
@@ -32,7 +33,7 @@ describe('Logger Success...', () => {
   const des = `Write message to file, extract the file content and search for the
     given message`;
   describe(des, () => {
-    const should = `Should write message and console.log message`;
+    const should = `Should write message to the file and console.log the message`;
     describe('WARNING message', () => {
       beforeEach(function() {
         this.sinon.stub(console, 'log');
@@ -152,12 +153,17 @@ describe('Logger Success...', () => {
     describe('UNAUTHORIZED message', () => {
       it(should, (done) => {
         rmFile();
-        const message = logger.unauthorized('unauthorized', 'some UNAUTHORIZED for tests');
+        const login = {
+          username: 'dummy',
+          password: 'password'
+        };
+        const message = logger.unauthorized('login', login);
+        const stringified = JSON.stringify(login, null, 4);
         expect(message)
-          .to.equal('tests - UNAUTHORIZED - unauthorized: some UNAUTHORIZED for tests');
+          .to.equal('tests - UNAUTHORIZED - login: ' + stringified);
         setTimeout(() => {
           expect(getContent())
-          .to.contains('tests - UNAUTHORIZED - unauthorized: some UNAUTHORIZED for tests');
+            .to.contains('tests - UNAUTHORIZED - login: ' + stringified);
           done();
         }, 100);
       });
@@ -171,11 +177,20 @@ describe('Logger Success...', () => {
       });
     });
 
+    describe('DEBUG message using debug module', () => {
+      it('Should just return the message', () => {
+        process.env.DEBUG = 'tests';
+        rmFile();
+        expect(logger.debug.namespace).equal('tests');
+      });
+    });
+
     describe('Outputting all messages using TYPE env variable', () => {
       beforeEach(function() {
         this.sinon.stub(console, 'log');
       });
       it('Should output all messages with corresponding color', (done) => {
+        process.env.LOGGER_TYPES = '';
         rmFile();
         let returned = logger.warning('warning', 'some WARNING for tests');
         let message = 'tests - WARNING - warning: some WARNING for tests';
@@ -208,6 +223,7 @@ describe('Logger Fail...', () => {
   });
   describe('Messages should be outputted with the corresponding color', () => {
     it('Should return "false" when tested against wrong color', (done) => {
+      process.env.LOGGER_TYPES = 'info';
       rmFile();
       const message = logger.info('info', 'some INFO for tests');
       const info = 'tests - INFO - info: some INFO for tests';
@@ -219,6 +235,13 @@ describe('Logger Fail...', () => {
           .to.contains('tests - INFO - info: some INFO for tests');
         done();
       }, 100);
+    });
+  });
+
+  describe('Instance without namespace', () => {
+    it('Should throw an error', () => {
+      const error = 'Logger must be initialized with namespace param';
+      expect(() => {new Logger()}).to.throw(error);
     });
   });
 
