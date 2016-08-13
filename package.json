@@ -1,7 +1,7 @@
 {
   "name": "esrol-logger",
   "description": "Write different type of messages, create daily log files and output colored messages to the console.",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "main": "index.js",
   "typings": "index.d.ts",
   "author": "Ivaylo Ivanov <ivaylo.ivanov.ipi@gmail.com>",
