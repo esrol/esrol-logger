@@ -1,4 +1,5 @@
 export declare class  Logger {
+  static setLogDir(dir: string): void;
   constructor(name: string);
   alert(type: string, message?: any): string;
   critical(type: string, message?: any): string;
