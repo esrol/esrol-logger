@@ -1,4 +1,5 @@
-interface Logger {
+export declare class  Logger {
+  constructor(name: string);
   alert(type: string, message?: any): string;
   critical(type: string, message?: any): string;
   error(type: string, message?: any): string;
@@ -10,11 +11,3 @@ interface Logger {
   badrequest(type: string, message?: any): string;
   debug(type: string, message?: any): string;
 }
-
-interface LoggerFactory {
-  new(name: string): Logger;
-  setLogDir(dir: string): void;
-}
-
-declare var logger: LoggerFactory;
-export = logger;
