@@ -1,2 +1,2 @@
 'use strict';
-module.exports = require ('./lib/logger');
+exports.Logger = require ('./lib/logger').Logger;

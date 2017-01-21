@@ -1,5 +1,5 @@
 'use strict';
-const Logger = require('../');
+const Logger = require('../').Logger;
 const logger = new Logger('your-namespace');
 
 // The following will write messages into log file
